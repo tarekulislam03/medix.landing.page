@@ -1,0 +1,250 @@
+/* ==========================================================================
+   MEDIX PHARMACY ERP — Established B2B Software Vendor CSS
+   Visual Identity: Crisp, Dense, Functional Enterprise Software System
+   ========================================================================== */
+
+:root {
+  /* Rich Enterprise ERP Palette */
+  --bg-main: #F4F7F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EBF3EF;
+  --bg-dark-green: #074730;
+  --bg-green-secondary: #059669;
+  --bg-light-green: #D1FAE5;
+  
+  /* Orange Accent System */
+  --color-orange-primary: #EA580C;
+  --color-orange-hover: #C2410C;
+  --color-orange-bg: #FFEDD5;
+  
+  --color-dark-text: #0F172A;
+  --color-gray-text: #334155;
+  --color-subtle-text: #64748B;
+  --color-inverse-text: #FFFFFF;
+  --color-inverse-muted: #A7F3D0;
+  
+  --color-border: #CBD5E1;
+  --color-border-dark: #047857;
+
+  /* Status Colors */
+  --color-status-success: #059669;
+  --color-status-success-bg: #D1FAE5;
+  --color-status-warning: #D97706;
+  --color-status-warning-bg: #FEF3C7;
+  --color-status-danger: #DC2626;
+  --color-status-danger-bg: #FEE2E2;
+
+  /* Traditional Corporate Typography Scale */
+  --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Sans', monospace;
+
+  /* Squared Functional 2px - 4px Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-card: 4px;
+  --radius-lg: 4px;
+
+  /* Crisp ERP Box Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 3px 8px rgba(7, 71, 48, 0.08);
+  --shadow-lg: 0 4px 14px rgba(7, 71, 48, 0.12);
+
+  --transition-fast: 100ms ease-in-out;
+  --transition-normal: 150ms ease-in-out;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px; /* Compact traditional base size */
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--color-dark-text);
+  font-family: var(--font-body);
+  font-size: 0.96rem; /* Crisp functional font size */
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--bg-dark-green);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.container-narrow {
+  max-width: 920px;
+}
+
+.section-padding {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Squared Rectangular Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-md); /* 3px crisp squared border radius */
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--bg-dark-green);
+  color: var(--color-inverse-text);
+  border-color: var(--bg-dark-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-green-secondary);
+  border-color: var(--bg-green-secondary);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--bg-dark-green);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--bg-dark-green);
+}
+
+.btn-light {
+  background-color: var(--bg-light-green);
+  color: var(--bg-dark-green);
+  border-color: rgba(7, 71, 48, 0.2);
+}
+
+.btn-light:hover {
+  background-color: #A7F3D0;
+}
+
+.btn-orange {
+  background-color: var(--color-orange-primary);
+  color: #FFFFFF;
+  border-color: var(--color-orange-primary);
+  box-shadow: 0 2px 4px rgba(234, 88, 12, 0.25);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-orange-hover);
+  border-color: var(--color-orange-hover);
+}
+
+.badge-orange {
+  background-color: var(--color-orange-bg);
+  color: var(--color-orange-primary);
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.98rem;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+}
+
+/* Eyebrow Label */
+.eyebrow-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bg-green-secondary);
+  margin-bottom: 0.4rem;
+}
+
+/* Crisp Squared ERP Box Card */
+.medix-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card); /* 4px crisp squared radius */
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Section Header Typography */
+.section-header {
+  margin-bottom: 1.75rem; /* Denser margin */
+}
+
+.section-header.center {
+  text-align: center;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: 2.1rem; /* 33px section heading */
+  color: var(--bg-dark-green);
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: var(--color-gray-text);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .section-header h2 {
+    font-size: 1.7rem;
+  }
+}

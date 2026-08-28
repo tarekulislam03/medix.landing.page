@@ -1,0 +1,227 @@
+.header-master-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-dark-green);
+}
+
+/* UPPER SUB INFORMATION BAR (30px, White / Off-White Background) */
+.top-info-bar {
+  height: 30px;
+  background-color: #FFFFFF;
+  color: var(--color-dark-text);
+  font-size: 0.78rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+}
+
+.top-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.top-info-left {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--bg-dark-green);
+  display: flex;
+  align-items: center;
+}
+
+.top-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bg-dark-green);
+  letter-spacing: 0.01em;
+}
+
+.top-trust-icon {
+  color: var(--bg-green-secondary);
+  flex-shrink: 0;
+}
+
+.top-info-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.top-info-link {
+  color: var(--color-gray-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.top-info-link:hover {
+  color: var(--bg-dark-green);
+  text-decoration: underline;
+}
+
+.top-sep {
+  opacity: 0.4;
+  color: var(--color-border);
+  font-size: 0.72rem;
+}
+
+.top-phone {
+  color: var(--bg-dark-green);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.top-phone:hover {
+  text-decoration: underline;
+}
+
+/* MAIN NAVIGATION (72px height, Dark Green Background) */
+.main-header {
+  height: 72px;
+  background-color: var(--bg-dark-green);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 38px;
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Desktop Center Navigation (White Text on Dark Green) */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-inverse-text);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--bg-light-green);
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--bg-light-green);
+}
+
+/* Right Action Button: Light Green / White Button with Dark Green Text */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-corporate-demo {
+  background-color: var(--color-orange-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 4px; /* 4px border radius */
+  border: 1px solid var(--color-orange-primary);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-corporate-demo:hover {
+  background-color: var(--color-orange-hover);
+  border-color: var(--color-orange-hover);
+  color: #FFFFFF;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-inverse-text);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.mobile-menu-drawer {
+  background-color: var(--bg-dark-green);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-menu-drawer a {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-inverse-text);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-demo-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Desktop layout breakpoint rules */
+@media (max-width: 900px) {
+  .top-info-left {
+    display: none;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .btn-corporate-demo {
+    display: none;
+  }
+  .mobile-demo-btn {
+    display: block;
+  }
+}

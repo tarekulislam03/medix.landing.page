@@ -1,0 +1,384 @@
+.pricing-table-section {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gov-reg-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-gray-text);
+  background-color: var(--bg-surface-alt);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-top: 0.5rem;
+}
+
+/* Two Package Cards Layout */
+.pricing-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.pkg-card {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card); /* 4px crisp radius */
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.pkg-card.featured {
+  border: 2px solid var(--color-orange-primary);
+  background: linear-gradient(180deg, #FFFDF9 0%, #FFFFFF 100%);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.15);
+}
+
+.featured-flag {
+  position: absolute;
+  top: -12px;
+  right: 1.25rem;
+  background-color: var(--color-orange-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.35);
+}
+
+.pkg-subtitle.highlight-subtitle {
+  color: var(--bg-dark-green);
+  font-weight: 600;
+}
+
+.pkg-device-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--bg-green-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.pkg-device-tag.text-orange {
+  color: var(--color-orange-primary);
+}
+
+.pkg-title {
+  font-size: 1.5rem;
+  color: var(--bg-dark-green);
+  margin-bottom: 0.3rem;
+  line-height: 1.25;
+}
+
+.pkg-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-gray-text);
+  margin-bottom: 1.5rem;
+  min-height: 2.6em;
+}
+
+.pkg-price-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.price-old-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-old {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-subtle-text);
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.price-save-tag {
+  background-color: var(--color-orange-primary);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.12rem 0.45rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+.price-current-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.price-currency {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--bg-dark-green);
+}
+
+.price-amount {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--bg-dark-green);
+  line-height: 1;
+}
+
+.price-type {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-gray-text);
+  margin-left: 0.3rem;
+}
+
+.gst-note {
+  font-size: 0.78rem;
+  color: var(--color-subtle-text);
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.pkg-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pkg-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-dark-text);
+  line-height: 1.45;
+}
+
+.pkg-feature-list li strong {
+  color: var(--bg-dark-green);
+}
+
+.pkg-check {
+  color: var(--bg-green-secondary);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.pkg-check.orange {
+  color: var(--color-orange-primary);
+}
+
+.pkg-check.muted {
+  color: var(--color-subtle-text);
+}
+
+.muted-feature {
+  color: var(--color-subtle-text) !important;
+}
+
+.pkg-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Compact Ultra-Clean Horizontal AMC Section */
+.amc-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--bg-dark-green);
+  border-radius: var(--radius-card);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.amc-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.amc-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.amc-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.68rem;
+  color: var(--bg-dark-green);
+  background-color: var(--bg-light-green);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.amc-title {
+  font-size: 1.25rem;
+  color: var(--bg-dark-green);
+  margin: 0;
+  font-weight: 700;
+}
+
+.amc-benefits-row {
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+}
+
+.amc-benefits-row li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--color-dark-text);
+  font-weight: 500;
+}
+
+.amc-check {
+  color: var(--bg-green-secondary);
+  flex-shrink: 0;
+}
+
+.amc-price-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.amc-price-anchor {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.amc-old-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-subtle-text);
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.amc-save-badge {
+  background-color: var(--color-orange-primary);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+.amc-price-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.amc-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bg-dark-green);
+  line-height: 1;
+}
+
+.amc-unit {
+  font-size: 0.88rem;
+  color: var(--color-gray-text);
+  font-weight: 700;
+}
+
+.amc-reassurance-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--bg-dark-green);
+  font-weight: 600;
+}
+
+.amc-shield-icon {
+  color: var(--bg-green-secondary);
+  flex-shrink: 0;
+}
+
+/* Lifetime Guarantee Box */
+.lifetime-note-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--bg-dark-green);
+  border-radius: var(--radius-card);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.note-icon {
+  color: var(--bg-dark-green);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.note-text {
+  font-size: 0.88rem;
+  color: var(--color-gray-text);
+  line-height: 1.55;
+}
+
+.note-text strong {
+  color: var(--bg-dark-green);
+}
+
+@media (max-width: 900px) {
+  .pricing-packages-grid {
+    grid-template-columns: 1fr;
+  }
+  .amc-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .amc-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+}

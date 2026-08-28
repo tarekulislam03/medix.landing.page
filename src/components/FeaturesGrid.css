@@ -1,0 +1,223 @@
+.why-medix-section {
+  background-color: var(--bg-surface-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.why-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  /* 4px crisp radius */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.why-card:hover {
+  border-color: var(--bg-dark-green);
+  box-shadow: var(--shadow-md);
+}
+
+.why-item-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bg-dark-green);
+  margin-bottom: 0.5rem;
+}
+
+
+.why-item-desc {
+  font-size: 1.2rem;
+  color: var(--color-gray-text);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+/* Unique Watch Demo Video Button */
+.why-card-action {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+  width: 100%;
+}
+
+.btn-demo-video {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background-color: var(--bg-surface-alt);
+  color: var(--bg-dark-green);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-video-icon {
+  color: var(--bg-dark-green);
+  transition: color var(--transition-fast);
+}
+
+.btn-demo-video:hover {
+  background-color: var(--bg-dark-green);
+  color: #FFFFFF;
+  border-color: var(--bg-dark-green);
+}
+
+.btn-demo-video:hover .btn-video-icon {
+  color: #FFFFFF;
+}
+
+
+/* Video Modal Backdrop & Content */
+.feature-video-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.feature-video-modal-content {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: modalFadeIn 200ms ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.feature-video-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-dark-green);
+  color: #FFFFFF;
+}
+
+.feature-video-modal-header h3 {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.feature-video-close-btn {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0 6px;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 3px;
+  transition: background-color var(--transition-fast);
+}
+
+.feature-video-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.feature-video-player-container {
+  width: 100%;
+  background-color: #0F172A;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.feature-demo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.video-placeholder-box {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: #94A3B8;
+}
+
+.video-placeholder-box h4 {
+  color: #F8FAFC;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-placeholder-box p {
+  font-size: 0.88rem;
+  color: #94A3B8;
+}
+
+.video-placeholder-box code {
+  background-color: #1E293B;
+  color: #38BDF8;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+}
+
+.feature-video-modal-footer {
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--color-border);
+}
+
+.modal-feature-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,213 @@
+.tablet-corporate-section {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tablet-corp-grid {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.tablet-corp-text h2 {
+  font-size: 2.1rem;
+  color: var(--bg-dark-green);
+  margin-bottom: 0.6rem;
+}
+
+.tablet-corp-text p {
+  font-size: 0.98rem;
+  color: var(--color-gray-text);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.t-grid-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.t-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.t-feat h4 {
+  font-size: 0.95rem;
+  color: var(--bg-dark-green);
+  margin-bottom: 0.2rem;
+}
+
+.t-feat p {
+  font-size: 0.85rem;
+  color: var(--color-gray-text);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* ERP Screenshot Carousel Frame */
+.t-framed-box {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+}
+
+.t-framed-head {
+  background-color: var(--bg-dark-green);
+  color: var(--color-inverse-text);
+  padding: 0.65rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-family: var(--font-heading);
+}
+
+.t-head-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.t-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background-color: #EF4444; }
+.dot-yellow { background-color: #F59E0B; }
+.dot-green { background-color: #10B981; }
+
+.t-head-title {
+  font-weight: 600;
+  font-size: 0.82rem;
+  margin-left: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.t-head-badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.t-real-img-wrap {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-surface);
+  overflow: hidden;
+}
+
+.t-carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 700ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.t-slide-item {
+  min-width: 100%;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.t-screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Nav Arrows */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: rgba(7, 71, 48, 0.75);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+
+.carousel-nav-btn:hover {
+  background-color: var(--color-orange-primary);
+  border-color: var(--color-orange-primary);
+}
+
+.carousel-nav-btn.prev {
+  left: 0.75rem;
+}
+
+.carousel-nav-btn.next {
+  right: 0.75rem;
+}
+
+/* Caption Bar & Dots */
+.carousel-caption-bar {
+  padding: 0.85rem 1rem;
+  background-color: var(--bg-surface-alt);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.caption-text {
+  font-size: 0.84rem;
+  color: var(--color-dark-text);
+  line-height: 1.4;
+}
+
+.caption-text strong {
+  color: var(--bg-dark-green);
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.carousel-dot.active {
+  width: 20px;
+  background-color: var(--color-orange-primary);
+}
+
+@media (max-width: 960px) {
+  .tablet-corp-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
