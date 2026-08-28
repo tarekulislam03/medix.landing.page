@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Phone } from 'lucide-react';
 import inshotShowcaseVideo from '../assets/inshot-showcase-compressed.mp4';
 import './HeroSection.css';
@@ -8,6 +8,7 @@ interface HeroSectionProps { }
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   // Play video on mount
   useEffect(() => {
@@ -141,6 +142,16 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           {/* RIGHT COLUMN: Interactive Video Interface Demo */}
           <div className="hero-visual-col">
             <div className="erp-window-frame medix-card">
+              {/* Skeleton loader - visible until video is ready */}
+              <div className={`hero-video-skeleton ${videoLoaded ? 'hero-video-skeleton--hidden' : ''}`}>
+                <div className="hero-video-skeleton__shimmer" />
+                <div className="hero-video-skeleton__icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+
               <video
                 ref={videoRef}
                 autoPlay
@@ -148,8 +159,9 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
                 muted
                 playsInline
                 controls
-                className="erp-screenshot-img"
+                className={`erp-screenshot-img ${videoLoaded ? 'erp-screenshot-img--loaded' : 'erp-screenshot-img--loading'}`}
                 style={{ borderRadius: 'var(--radius-card)', display: 'block', width: '100%' }}
+                onLoadedData={() => setVideoLoaded(true)}
               >
                 <source src={inshotShowcaseVideo} type="video/mp4" />
               </video>
