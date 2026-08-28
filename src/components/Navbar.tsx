@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
@@ -8,6 +9,8 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   return (
     <header className="header-master-wrapper">
@@ -35,18 +38,29 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
         <div className="container header-container">
 
           {/* Left: Medix Logo */}
-          <a href="#" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img src="/web-logo.png" alt="Medix Logo" className="brand-logo-img" />
-          </a>
+          </Link>
 
           {/* Navigation Links: Home, Features, Solutions, Pricing, About, Contact */}
           <nav className="navbar-nav">
-            <a href="#" className="nav-link active">Home</a>
-            <a href="#features" className="nav-link">Features</a>
-            <a href="#solutions" className="nav-link">Solutions</a>
-            <a href="#pricing" className="nav-link">Pricing</a>
-            <a href="#about" className="nav-link">About</a>
-            <a href="#faq" className="nav-link">Contact</a>
+            {isHome ? (
+              <>
+                <a href="#" className="nav-link active">Home</a>
+                <a href="#features" className="nav-link">Features</a>
+                <a href="#solutions" className="nav-link">Solutions</a>
+                <a href="#pricing" className="nav-link">Pricing</a>
+                <a href="#about" className="nav-link">About</a>
+                <a href="#faq" className="nav-link">Contact</a>
+              </>
+            ) : (
+              <>
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/#features" className="nav-link">Features</Link>
+                <Link to="/#pricing" className="nav-link">Pricing</Link>
+              </>
+            )}
+            <Link to="/dealers" className={`nav-link${location.pathname === '/dealers' ? ' active' : ''}`}>Dealers</Link>
           </nav>
 
           {/* Right Action Button: Rectangular 4px border radius dark green button */}
@@ -73,12 +87,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="mobile-menu-drawer">
-          <a href="#" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
-          <a href="#solutions" onClick={() => setMobileMenuOpen(false)}>Solutions</a>
-          <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a href="#faq" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+          {isHome ? (
+            <>
+              <a href="#" onClick={() => setMobileMenuOpen(false)}>Home</a>
+              <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
+              <a href="#solutions" onClick={() => setMobileMenuOpen(false)}>Solutions</a>
+              <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+            </>
+          ) : (
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          )}
+          <Link to="/dealers" onClick={() => setMobileMenuOpen(false)}>Dealers</Link>
           <button
             onClick={() => { setMobileMenuOpen(false); onOpenDemo(); }}
             className="btn-corporate-demo mobile-demo-btn"
