@@ -3,8 +3,8 @@ import './WhatsAppWidget.css';
 
 // Editable links & contact details
 const PHONE_NUMBER = '+918101402916';
-const WHATSAPP_GROUP_LINK = 'https://chat.whatsapp.com/';
-const LINKEDIN_URL = 'https://www.linkedin.com/company/usemedix/';
+const WHATSAPP_GROUP_LINK = 'https://chat.whatsapp.com/CY7B1oY6YQGAxyF0ya7uiJ';
+const LINKEDIN_URL = 'https://www.linkedin.com/company/medix-erp/';
 
 export const WhatsAppWidget: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

@@ -5,7 +5,6 @@ import { AboutSection } from '../components/AboutSection';
 import { PricingSection } from '../components/PricingSection';
 import { FeaturesGrid } from '../components/FeaturesGrid';
 import { FeatureTable } from '../components/FeatureTable';
-import { DifferentiatorSection } from '../components/DifferentiatorSection';
 import { TabletShowcase } from '../components/TabletShowcase';
 import { SpecificationsTable } from '../components/SpecificationsTable';
 import { FAQSection } from '../components/FAQSection';
@@ -34,7 +33,6 @@ export function HomePage() {
         <PricingSection onOpenDemo={handleOpenDemo} />
         <FeaturesGrid />
         <FeatureTable />
-        <DifferentiatorSection />
         <TabletShowcase />
         <SpecificationsTable />
         <FAQSection />

@@ -9,19 +9,19 @@
 
 .pricing-headline-block {
   text-align: left;
-  margin-top: 10px;
-  margin-bottom: 12px;
+  margin-top: 4px;
+  margin-bottom: 6px;
 }
 
 .pricing-headline {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--bg-dark-green);
   margin-bottom: 2px;
 }
 
 .pricing-subline {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color-gray-text);
   margin: 0;
 }
@@ -30,10 +30,10 @@
   background-color: #E4EAE6;
   border: 1px solid var(--color-border);
   border-radius: 2px;
-  padding: 10px 14px;
-  font-size: 12px;
+  padding: 6px 12px;
+  font-size: 11px;
   color: var(--color-dark-text);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   text-align: left;
 }
 
@@ -41,8 +41,8 @@
 .pricing-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .plan-card {
@@ -82,20 +82,20 @@
 }
 
 .plan-card-body {
-  padding: 14px;
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .plan-price-wrap {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border-bottom: 1px solid var(--color-border-light);
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .plan-price {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: var(--bg-dark-green);
   line-height: 1.1;
@@ -104,15 +104,15 @@
 .plan-price-sub {
   font-size: 11px;
   color: var(--color-gray-text);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .plan-setup-line {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   color: var(--color-dark-text);
-  margin-bottom: 10px;
-  padding: 4px 8px;
+  margin-bottom: 8px;
+  padding: 3px 6px;
   background-color: var(--bg-surface-alt);
   border: 1px solid var(--color-border-light);
   border-radius: 2px;
@@ -121,11 +121,11 @@
 .plan-features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .plan-feature-item {
@@ -160,7 +160,7 @@
 .amc-line {
   font-size: 11px;
   color: var(--color-gray-text);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   text-align: left;
 }
 
