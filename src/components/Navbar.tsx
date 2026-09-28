@@ -3,14 +3,41 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
+const HOME_TABS = [
+  { id: 'home',      label: 'Home',     hash: '#'              },
+  { id: 'features',  label: 'Features', hash: '#features'      },
+  { id: 'modules',   label: 'Modules',  hash: '#modules'       },
+  { id: 'pricing',   label: 'Pricing',  hash: '#pricing'       },
+  { id: 'specs',     label: 'Specs',    hash: '#specifications' },
+  { id: 'about',     label: 'About',    hash: '#about'         },
+  { id: 'contact',   label: 'Contact',  hash: '#faq'           },
+];
+
 interface NavbarProps {
   onOpenDemo: () => void;
+  activeTab?: string;
+  onTabChange?: (tabId: string, hash: string) => void;
+  breadcrumb?: string;
+  isDesktop?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  onOpenDemo,
+  activeTab = 'home',
+  onTabChange,
+  breadcrumb = 'Pharmacy Management Software',
+  isDesktop = false,
+}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+
+  const handleTabClick = (e: React.MouseEvent<HTMLAnchorElement>, tabId: string, hash: string) => {
+    if (isDesktop && isHome && onTabChange) {
+      e.preventDefault();
+      onTabChange(tabId, hash);
+    }
+  };
 
   return (
     <header className="header-master-wrapper">
@@ -22,9 +49,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
             <span>Pharmacy Management Software System</span>
           </div>
           <div className="top-info-right">
-            <a href="#faq" className="top-info-link">Support</a>
+            <a
+              href="#faq"
+              className="top-info-link"
+              onClick={e => isDesktop && isHome && onTabChange ? (e.preventDefault(), onTabChange('contact', '#faq')) : undefined}
+            >Support</a>
             <span className="top-sep">|</span>
-            <a href="#faq" className="top-info-link">Contact</a>
+            <a
+              href="#faq"
+              className="top-info-link"
+              onClick={e => isDesktop && isHome && onTabChange ? (e.preventDefault(), onTabChange('contact', '#faq')) : undefined}
+            >Contact</a>
             <span className="top-sep">|</span>
             <a href="tel:+918101402916" className="top-phone">
               +91 81014 02916
@@ -42,17 +77,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
             <img src="/web-logo.png" alt="Medix Logo" className="brand-logo-img" />
           </Link>
 
-          {/* Navigation Links with 1px divider pairs */}
+          {/* Navigation Links */}
           <nav className="navbar-nav">
             {isHome ? (
               <>
-                <a href="#" className="nav-link active">Home</a>
-                <a href="#features" className="nav-link">Features</a>
-                <a href="#modules" className="nav-link">Modules</a>
-                <a href="#pricing" className="nav-link">Pricing</a>
-                <a href="#specifications" className="nav-link">Specs</a>
-                <a href="#about" className="nav-link">About</a>
-                <a href="#faq" className="nav-link">Contact</a>
+                {HOME_TABS.map(tab => (
+                  <a
+                    key={tab.id}
+                    href={tab.hash}
+                    className={`nav-link${isDesktop && activeTab === tab.id ? ' active' : ''}`}
+                    onClick={e => handleTabClick(e, tab.id, tab.hash)}
+                  >
+                    {tab.label}
+                  </a>
+                ))}
               </>
             ) : (
               <>
@@ -67,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
           {/* Right Action Button */}
           <div className="navbar-actions">
             <button
-              onClick={onOpenDemo}
+              onClick={() => isDesktop && isHome && onTabChange ? onTabChange('contact', '#faq') : onOpenDemo()}
               className="btn-corporate-demo"
             >
               Book a Demo
@@ -88,12 +126,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
       {/* Breadcrumb line under nav */}
       <div className="breadcrumb-bar">
         <div className="container">
-          <Link to="/">Home</Link>
-          <span className="breadcrumb-sep">&gt;</span>
           {isHome ? (
-            <span>Pharmacy Management Software</span>
+            <>
+              <a href="#" onClick={e => isDesktop && onTabChange ? (e.preventDefault(), onTabChange('home', '#')) : undefined}>Home</a>
+              {isDesktop && activeTab !== 'home' && (
+                <>
+                  <span className="breadcrumb-sep">&gt;</span>
+                  <span>{breadcrumb}</span>
+                </>
+              )}
+            </>
           ) : (
-            <Link to="/dealers">Dealers &amp; Partners</Link>
+            <>
+              <Link to="/">Home</Link>
+              <span className="breadcrumb-sep">&gt;</span>
+              <Link to="/dealers">Dealers &amp; Partners</Link>
+            </>
           )}
         </div>
       </div>

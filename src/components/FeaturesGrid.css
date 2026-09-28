@@ -1,5 +1,5 @@
 /* ============================================================
-   FEATURES GRID — Enterprise boxed panel style (No Header BG Color)
+   FEATURES GRID — What Problem Medix Solves
    ============================================================ */
 
 .why-medix-section {
@@ -45,7 +45,7 @@
   border-color: var(--bg-dark-green);
 }
 
-/* Points Heading - Bold dark green text, NO background color, NO border-bottom */
+/* Points Heading */
 .why-card .why-item-title,
 h3.why-item-title {
   font-family: var(--font-heading);
@@ -79,5 +79,48 @@ h3.why-item-title {
 @media (max-width: 600px) {
   .why-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* 90s Desktop Specific Styling — 3-Column Bordered Table Style */
+@media (min-width: 1024px) {
+  .why-medix-section {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 !important;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+  }
+  .why-card {
+    border: 1px solid #808080 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #FFFFFF;
+  }
+  .why-card:hover {
+    border-color: #808080 !important;
+  }
+  .why-card .why-item-title,
+  h3.why-item-title {
+    background: #E4EAE6 !important;
+    border-bottom: 1px solid #808080 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    color: #1F3D2F !important;
+    padding: 6px 8px !important;
+  }
+  .why-item-desc {
+    padding: 8px !important;
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    color: #222222 !important;
   }
 }

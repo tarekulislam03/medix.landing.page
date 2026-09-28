@@ -71,6 +71,10 @@
   text-decoration: underline;
 }
 
+.footer-desktop-actions {
+  display: none;
+}
+
 .footer-copyright-bar {
   display: flex;
   justify-content: space-between;
@@ -120,5 +124,27 @@
     flex-direction: column;
     gap: 4px;
     text-align: center;
+  }
+}
+
+/* 90s Desktop Plain Text Links Row */
+@media (min-width: 1024px) {
+  .footer-desktop-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+  }
+  .footer-desktop-actions a {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+  .footer-desktop-actions a:hover {
+    color: var(--color-orange-primary, #8F5F1A);
   }
 }

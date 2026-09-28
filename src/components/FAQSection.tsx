@@ -42,10 +42,9 @@ export const FAQSection: React.FC = () => {
 
   return (
     <section className="section-padding faq-section" id="faq">
-      <div className="container container-narrow">
+      <div className="container">
         
         <div className="section-header center">
-          <div className="eyebrow-label">FREQUENTLY ASKED QUESTIONS</div>
           <h2>Frequently Asked Questions</h2>
           <p>
             Common questions about Medix pharmacy ERP software deployment and features.
@@ -65,6 +64,7 @@ export const FAQSection: React.FC = () => {
                   onClick={() => toggleFaq(idx)}
                 >
                   <span className="faq-q-text">{faq.question}</span>
+                  <span className="faq-marker-text">{isOpen ? '[-]' : '[+]'}</span>
                   <ChevronDown size={16} className={`faq-arr ${isOpen ? 'up' : ''}`} />
                 </button>
 

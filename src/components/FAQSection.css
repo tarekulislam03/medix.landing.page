@@ -64,6 +64,10 @@
   color: var(--bg-dark-green);
 }
 
+.faq-marker-text {
+  display: none;
+}
+
 .faq-arr {
   color: var(--bg-green-secondary);
   transition: transform var(--transition-fast);
@@ -80,4 +84,45 @@
   font-size: 12px;
   line-height: 1.55;
   background-color: var(--bg-surface-alt);
+}
+
+/* 90s Desktop Specific Styling */
+@media (min-width: 1024px) {
+  .faq-arr {
+    display: none !important;
+  }
+  .faq-marker-text {
+    display: inline-block !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1F3D2F;
+    flex-shrink: 0;
+  }
+  .traditional-faq-list {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+  }
+  .faq-row {
+    border-bottom: 1px solid #808080;
+    border-radius: 0px !important;
+  }
+  .faq-q-btn {
+    padding: 6px 10px;
+    border-radius: 0px !important;
+    transition: none !important;
+  }
+  .faq-q-text {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+  }
+  .faq-a-body {
+    padding: 6px 10px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    border-top: 1px solid #808080;
+  }
 }

@@ -316,3 +316,168 @@ a:hover {
     font-size: 16px;
   }
 }
+
+/* ============================================================
+   90s DESKTOP SPECIFIC OVERRIDES (@media (min-width: 1024px))
+   ============================================================ */
+@media (min-width: 1024px) {
+  :root {
+    --bg-dark-green-gradient: #1F3D2F;
+    --bg-brass-gradient: #8F5F1A;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-card: 0px;
+    --radius-lg: 0px;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+  }
+
+  body {
+    background-color: #F2F3F1 !important;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #222222;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+
+  /* Fixed 960px centered application box */
+  .medix-app,
+  .medix-dealers-page {
+    width: 960px !important;
+    max-width: 960px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-left: 1px solid #808080 !important;
+    border-right: 1px solid #808080 !important;
+    background-color: #FFFFFF !important;
+    box-sizing: border-box !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Classic engraved section divider line (1px #808080 with 1px #fff below it) */
+  .section-padding {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px solid #808080 !important;
+    box-shadow: inset 0 -1px 0 #FFFFFF !important;
+  }
+
+  /* Title Strips — Flat #1F3D2F, Times New Roman 16px, 2px outset border */
+  .section-header h2 {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+    background: #1F3D2F !important;
+    padding: 4px 8px !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF !important;
+    border-radius: 0px !important;
+    display: block;
+  }
+
+  .section-header p {
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 11px !important;
+    background-color: #E4EAE6 !important;
+    border: 1px solid #808080 !important;
+    border-top: none !important;
+    border-radius: 0px !important;
+    padding: 4px 8px !important;
+  }
+
+  /* 90s Classic Links */
+  a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #551A8B;
+  }
+  a:hover {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  /* Header Links on dark background stay white */
+  .header-master-wrapper a,
+  .main-header a {
+    color: #FFFFFF !important;
+    text-decoration: underline;
+  }
+
+  /* 3D Bevel Buttons */
+  .btn {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF !important;
+    border-radius: 0px !important;
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    padding: 3px 8px !important;
+  }
+
+  .btn-primary, .btn-orange {
+    background: #8F5F1A !important;
+    color: #FFFFFF !important;
+  }
+
+  .btn-secondary {
+    background: #EBECE8 !important;
+    color: #1F3D2F !important;
+  }
+
+  .btn:active, .btn-primary:active, .btn-secondary:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080 !important;
+  }
+
+  /* 90s Tables: 1px #808080 border on every cell, 4-6px padding */
+  .erp-table {
+    border: 1px solid #808080 !important;
+    border-collapse: collapse !important;
+  }
+
+  .erp-table th {
+    background: #E4EAE6 !important;
+    color: #1F3D2F !important;
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    border: 1px solid #808080 !important;
+    padding: 4px 6px !important;
+  }
+
+  .erp-table td {
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 11px !important;
+    border: 1px solid #808080 !important;
+    padding: 4px 6px !important;
+  }
+
+  .erp-table tr:nth-child(even) td {
+    background-color: #F7F8F7 !important;
+  }
+}

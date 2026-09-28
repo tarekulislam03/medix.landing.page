@@ -3,7 +3,11 @@ import { Phone } from 'lucide-react';
 import inshotShowcaseVideo from '../assets/inshot-showcase-compressed.mp4';
 import './HeroSection.css';
 
-export const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onTabChange?: (tabId: string, hash: string) => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ onTabChange }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -14,8 +18,15 @@ export const HeroSection: React.FC = () => {
     }
   }, []);
 
+  const handleFeatureClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onTabChange && window.matchMedia('(min-width: 1024px)').matches) {
+      e.preventDefault();
+      onTabChange('features', '#features');
+    }
+  };
+
   return (
-    <section className="section-padding hero-corporate-section">
+    <section className="section-padding hero-corporate-section" id="home">
       <div className="container hero-content-container">
         <div className="hero-grid">
 
@@ -35,7 +46,7 @@ export const HeroSection: React.FC = () => {
                 Discuss on Call
               </a>
 
-              <a href="#features" className="btn btn-secondary btn-lg">
+              <a href="#features" className="btn btn-secondary btn-lg" onClick={handleFeatureClick}>
                 What Medix Solves
               </a>
             </div>

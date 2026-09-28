@@ -40,3 +40,20 @@
   margin-left: 0;
   border-radius: 0 2px 2px 0;
 }
+
+/* 90s Desktop Specific Styling */
+@media (min-width: 1024px) {
+  .about-text-container {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #808080 #FFFFFF #FFFFFF #808080 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    padding: 8px 12px !important;
+  }
+  .about-text-p {
+    font-family: Verdana, Tahoma, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}

@@ -91,7 +91,7 @@
   }
 }
 
-/* Mobile View Optimization: 29px heading font size & side-by-side flex CTA buttons */
+/* Mobile View Optimization */
 @media (max-width: 640px) {
   .hero-text-col {
     align-items: flex-start;
@@ -126,5 +126,49 @@
     flex: 0 0 auto;
     justify-content: center;
     text-align: center;
+  }
+}
+
+/* 90s Desktop Specific Styling */
+@media (min-width: 1024px) {
+  .hero-corporate-section {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .hero-main-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    line-height: 1.25;
+    color: #1F3D2F;
+    margin-bottom: 6px;
+  }
+  .hero-description {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #222222;
+    margin-bottom: 10px;
+  }
+  .hero-video-box {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    border-radius: 0px !important;
+    padding: 0;
+    height: 260px;
+    overflow: hidden;
+    outline: none !important;
+  }
+  .hero-video-element {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border: none;
   }
 }

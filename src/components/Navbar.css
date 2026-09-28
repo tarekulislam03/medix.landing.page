@@ -220,3 +220,47 @@
     display: block;
   }
 }
+
+/* 90s Desktop Static Header & Styling */
+@media (min-width: 1024px) {
+  .header-master-wrapper {
+    position: static !important;
+    top: auto !important;
+  }
+  .top-info-bar {
+    background: #E4EAE6 !important;
+    border-bottom: 1px solid #808080 !important;
+  }
+  .main-header {
+    background: #1F3D2F !important;
+    border-bottom: 1px solid #808080 !important;
+  }
+  .nav-link {
+    color: #FFFFFF !important;
+    font-size: 11px;
+    font-family: Verdana, Tahoma, sans-serif;
+    border-right: 1px solid #3A6350 !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+  .nav-link:first-child {
+    border-left: 1px solid #3A6350 !important;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    background: #8F5F1A !important;
+    color: #FFFFFF !important;
+  }
+  .btn-corporate-demo {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #FFFFFF #66430F #66430F #FFFFFF !important;
+    border-radius: 0px !important;
+    background: #8F5F1A !important;
+    transition: none !important;
+  }
+  .btn-corporate-demo:active {
+    border-color: #66430F #FFFFFF #FFFFFF #66430F !important;
+    background: #754C13 !important;
+  }
+}

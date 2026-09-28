@@ -203,3 +203,43 @@
     gap: 12px;
   }
 }
+
+/* 90s Desktop Specific Styling */
+@media (min-width: 1024px) {
+  .pricing-headline {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 16px !important;
+  }
+  .plan-card {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #808080 #FFFFFF #FFFFFF #808080 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+  }
+  .plan-card-header {
+    background-color: #E4EAE6 !important;
+    border-bottom: 1px solid #808080 !important;
+  }
+  .plan-title {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 14px !important;
+  }
+  .pricing-diff-banner {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #808080 #FFFFFF #FFFFFF #808080 !important;
+    border-radius: 0px !important;
+    background-color: #E4EAE6 !important;
+  }
+  .pricing-details {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #808080 #FFFFFF #FFFFFF #808080 !important;
+    border-radius: 0px !important;
+  }
+  .pricing-summary {
+    font-family: Verdana, Tahoma, sans-serif !important;
+    border-bottom: 1px solid #808080 !important;
+  }
+}

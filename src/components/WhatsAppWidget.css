@@ -1,5 +1,5 @@
 /* ============================================================
-   FLOATING SOCIAL & CALL BUTTONS WIDGET
+   FLOATING SOCIAL BUTTONS & MINI NOTICE WIDGET
    ============================================================ */
 
 .social-floating-stack {
@@ -144,5 +144,12 @@
   .social-float-btn {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Hide floating social buttons on Desktop (min-width: 1024px) per 90s Desktop spec */
+@media (min-width: 1024px) {
+  .social-floating-stack {
+    display: none !important;
   }
 }
