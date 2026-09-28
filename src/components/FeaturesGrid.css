@@ -49,11 +49,11 @@
 .why-card .why-item-title,
 h3.why-item-title {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--bg-dark-green) !important;
   margin: 0 !important;
-  padding: 6px 8px 2px 8px !important;
+  padding: 8px 10px 4px 10px !important;
   background: transparent !important;
   border-bottom: none !important;
   text-align: left;
@@ -61,11 +61,11 @@ h3.why-item-title {
 
 /* Description */
 .why-item-desc {
-  font-size: 12px;
-  color: var(--color-gray-text);
-  line-height: 1.4;
+  font-size: 13px;
+  color: var(--color-dark-text);
+  line-height: 1.45;
   margin: 0 !important;
-  padding: 2px 8px 6px 8px !important;
+  padding: 2px 10px 8px 10px !important;
   flex: 1;
   text-align: left;
 }

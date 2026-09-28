@@ -19,6 +19,7 @@ import {
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { DemoModal } from '../components/DemoModal';
+import { WhatsAppWidget } from '../components/WhatsAppWidget';
 import './DealersPage.css';
 
 /* FAQ data for distribution partners */
@@ -396,6 +397,7 @@ export const DealersPage: React.FC = () => {
 
       <Footer />
       <DemoModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
+      <WhatsAppWidget />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 /* ============================================================
-   PRICING SECTION — Enterprise Table Style
+   PRICING SECTION — Enterprise Plan Cards & Cost Comparison Style
    ============================================================ */
 
 .pricing-table-section {
@@ -7,6 +7,199 @@
   border-bottom: 1px solid var(--color-border, #C9CFCB);
 }
 
-.pricing-table-section .medix-card {
-  border: 1px solid var(--color-border, #C9CFCB);
+.pricing-headline-block {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.pricing-headline {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--bg-dark-green);
+  margin-bottom: 2px;
+}
+
+.pricing-subline {
+  font-size: 12px;
+  color: var(--color-gray-text);
+  margin: 0;
+}
+
+.pricing-diff-banner {
+  background-color: #E4EAE6;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--color-dark-text);
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+/* Two plan boxes grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.plan-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card-header {
+  background-color: #E4EAE6;
+  border-bottom: 1px solid var(--color-border);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plan-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--bg-dark-green);
+  margin: 0;
+}
+
+.plan-recommended-badge {
+  background: var(--bg-brass-gradient);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--color-orange-hover);
+  text-transform: uppercase;
+}
+
+.plan-card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plan-price-wrap {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--bg-dark-green);
+  line-height: 1.1;
+}
+
+.plan-price-sub {
+  font-size: 11px;
+  color: var(--color-gray-text);
+  margin-top: 3px;
+}
+
+.plan-setup-line {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-dark-text);
+  margin-bottom: 10px;
+  padding: 4px 8px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--color-border-light);
+  border-radius: 2px;
+}
+
+.plan-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.plan-feature-item {
+  font-size: 11px;
+  color: var(--color-dark-text);
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.plan-feature-item .check-icon {
+  color: var(--bg-dark-green);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.plan-feature-item .cross-icon {
+  color: #C0392B;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.plan-card-footer {
+  margin-top: auto;
+}
+
+.plan-btn-full {
+  width: 100%;
+}
+
+.amc-line {
+  font-size: 11px;
+  color: var(--color-gray-text);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Collapsed details section */
+.pricing-details {
+  border: 1px solid var(--color-border);
+  background-color: var(--bg-surface);
+  border-radius: 2px;
+  margin-top: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pricing-summary {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--bg-dark-green);
+  padding: 8px 12px;
+  background-color: #E4EAE6;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-summary:hover {
+  background-color: #DBE3DD;
+}
+
+.pricing-details[open] .pricing-summary {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-details-content {
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }

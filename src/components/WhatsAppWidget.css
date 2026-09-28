@@ -1,0 +1,148 @@
+/* ============================================================
+   FLOATING SOCIAL & CALL BUTTONS WIDGET
+   ============================================================ */
+
+.social-floating-stack {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-family: var(--font-body, Verdana, Tahoma, sans-serif);
+}
+
+.wa-row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Floating Buttons */
+.social-float-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 150ms ease, background 150ms ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* Call Button - Classic Muted Brass Gradient Accent */
+.call-btn {
+  background: var(--bg-brass-gradient, linear-gradient(to bottom, #A36F20 0%, #8F5F1A 100%));
+  border: 1px solid #66430F;
+}
+
+.call-btn:hover {
+  background: linear-gradient(to bottom, #8F5F1A 0%, #754C13 100%);
+  transform: scale(1.06);
+  color: #FFFFFF;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  background: #0A66C2;
+  border: 1px solid #08529C;
+}
+
+.linkedin-btn:hover {
+  background: #08529C;
+  transform: scale(1.06);
+  color: #FFFFFF;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  border: 1px solid #1EBE5B;
+}
+
+.whatsapp-btn:hover {
+  background: #20BA5A;
+  transform: scale(1.06);
+  color: #FFFFFF;
+}
+
+.social-float-btn:active {
+  transform: scale(0.95);
+}
+
+/* Compact Mini Pop-up Notice */
+.wa-mini-popup {
+  background-color: var(--bg-surface, #FFFFFF);
+  border: 1px solid var(--color-border, #C9CFCB);
+  border-color: #E2E6E3 #A3AAA6 #A3AAA6 #E2E6E3;
+  outline: 1px solid #C9CFCB;
+  border-radius: 2px;
+  padding: 5px 8px 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 220px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  animation: waSlideLeft 200ms ease-out;
+}
+
+@keyframes waSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wa-popup-link {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--bg-dark-green, #1F3D2F);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.wa-popup-link:hover {
+  color: var(--color-orange-primary, #8F5F1A);
+  text-decoration: underline;
+}
+
+.wa-mini-close {
+  background: transparent;
+  border: none;
+  color: #777777;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.wa-mini-close:hover {
+  color: #CC0000;
+}
+
+@media (max-width: 480px) {
+  .social-floating-stack {
+    bottom: 10px;
+    right: 10px;
+  }
+  .wa-mini-popup {
+    max-width: 180px;
+  }
+  .social-float-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

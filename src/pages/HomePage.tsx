@@ -11,6 +11,7 @@ import { SpecificationsTable } from '../components/SpecificationsTable';
 import { FAQSection } from '../components/FAQSection';
 import { Footer } from '../components/Footer';
 import { DemoModal } from '../components/DemoModal';
+import { WhatsAppWidget } from '../components/WhatsAppWidget';
 
 export function HomePage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -42,6 +43,7 @@ export function HomePage() {
       <Footer />
 
       <DemoModal isOpen={isDemoModalOpen} onClose={handleCloseDemo} />
+      <WhatsAppWidget />
     </div>
   );
 }
