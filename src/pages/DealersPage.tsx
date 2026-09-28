@@ -210,19 +210,19 @@ export const DealersPage: React.FC = () => {
                 <div className="tier-row">
                   <div className="tier-name">
                     Prime License
-                    <span className="tier-label">Software only (₹4,999)</span>
+                    <span className="tier-label">Software only (₹6,999)</span>
                   </div>
                   <div className="tier-commission">30%</div>
-                  <div className="tier-earnings">≈ ₹1,500 / sale</div>
+                  <div className="tier-earnings">≈ ₹2,100 / sale</div>
                 </div>
 
                 <div className="tier-row featured-tier">
                   <div className="tier-name">
                     Infinity Package
-                    <span className="tier-label">Software + Full Setup (₹7,999)</span>
+                    <span className="tier-label">Software + Full Setup (₹9,999)</span>
                   </div>
                   <div className="tier-commission">30%</div>
-                  <div className="tier-earnings">≈ ₹2,400 / sale</div>
+                  <div className="tier-earnings">≈ ₹3,000 / sale</div>
                 </div>
 
 

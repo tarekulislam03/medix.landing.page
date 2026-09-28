@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
 import { AboutSection } from '../components/AboutSection';
+import { PricingSection } from '../components/PricingSection';
 import { FeaturesGrid } from '../components/FeaturesGrid';
+import { FeatureTable } from '../components/FeatureTable';
 import { DifferentiatorSection } from '../components/DifferentiatorSection';
 import { TabletShowcase } from '../components/TabletShowcase';
-import { PricingSection } from '../components/PricingSection';
+import { SpecificationsTable } from '../components/SpecificationsTable';
 import { FAQSection } from '../components/FAQSection';
 import { Footer } from '../components/Footer';
 import { DemoModal } from '../components/DemoModal';
@@ -28,10 +30,12 @@ export function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
+        <PricingSection onOpenDemo={handleOpenDemo} />
         <FeaturesGrid />
+        <FeatureTable />
         <DifferentiatorSection />
         <TabletShowcase />
-        <PricingSection onOpenDemo={handleOpenDemo} />
+        <SpecificationsTable />
         <FAQSection />
       </main>
 
@@ -41,3 +45,5 @@ export function HomePage() {
     </div>
   );
 }
+
+export default HomePage;

@@ -15,11 +15,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
   return (
     <header className="header-master-wrapper">
 
-      {/* TOP INFORMATION BAR (30px height) */}
+      {/* TOP INFORMATION BAR (24px height) */}
       <div className="top-info-bar">
         <div className="container top-info-container">
           <div className="top-info-left">
-            <span>Pharmacy Management Software</span>
+            <span>Pharmacy Management Software System</span>
           </div>
           <div className="top-info-right">
             <a href="#faq" className="top-info-link">Support</a>
@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
         </div>
       </div>
 
-      {/* MAIN NAVIGATION (72px height) */}
+      {/* MAIN NAVIGATION */}
       <div className="main-header">
         <div className="container header-container">
 
@@ -42,14 +42,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
             <img src="/web-logo.png" alt="Medix Logo" className="brand-logo-img" />
           </Link>
 
-          {/* Navigation Links: Home, Features, Solutions, Pricing, About, Contact */}
+          {/* Navigation Links with 1px divider pairs */}
           <nav className="navbar-nav">
             {isHome ? (
               <>
                 <a href="#" className="nav-link active">Home</a>
                 <a href="#features" className="nav-link">Features</a>
-                <a href="#solutions" className="nav-link">Solutions</a>
+                <a href="#modules" className="nav-link">Modules</a>
                 <a href="#pricing" className="nav-link">Pricing</a>
+                <a href="#specifications" className="nav-link">Specs</a>
                 <a href="#about" className="nav-link">About</a>
                 <a href="#faq" className="nav-link">Contact</a>
               </>
@@ -63,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
             <Link to="/dealers" className={`nav-link${location.pathname === '/dealers' ? ' active' : ''}`}>Dealers</Link>
           </nav>
 
-          {/* Right Action Button: Rectangular 4px border radius dark green button */}
+          {/* Right Action Button */}
           <div className="navbar-actions">
             <button
               onClick={onOpenDemo}
@@ -77,10 +78,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation"
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
 
+        </div>
+      </div>
+
+      {/* Breadcrumb line under nav */}
+      <div className="breadcrumb-bar">
+        <div className="container">
+          <Link to="/">Home</Link>
+          <span className="breadcrumb-sep">&gt;</span>
+          {isHome ? (
+            <span>Pharmacy Management Software</span>
+          ) : (
+            <Link to="/dealers">Dealers &amp; Partners</Link>
+          )}
         </div>
       </div>
 
@@ -91,8 +105,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
             <>
               <a href="#" onClick={() => setMobileMenuOpen(false)}>Home</a>
               <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
-              <a href="#solutions" onClick={() => setMobileMenuOpen(false)}>Solutions</a>
+              <a href="#modules" onClick={() => setMobileMenuOpen(false)}>Modules</a>
               <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+              <a href="#specifications" onClick={() => setMobileMenuOpen(false)}>Specs</a>
               <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
               <a href="#faq" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </>

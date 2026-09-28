@@ -5,19 +5,19 @@ export const Footer: React.FC = () => {
   return (
     <footer className="corporate-footer">
       <div className="container">
-        
+
         <div className="footer-columns-grid">
-          
-          {/* Col 1: MEDIX */}
+
+          {/* Col 1: MEDIX Brand Info */}
           <div className="f-col">
             <div className="f-brand">
               <img src="/web-logo.png" alt="Medix Pharmacy Software" className="f-logo-img" />
             </div>
             <p className="f-about-text">
-              Pharmacy Management & ERP Software for Indian medical stores and retail chemists.
+              Pharmacy Management &amp; ERP Software for Indian medical stores and retail chemists.
             </p>
             <div className="f-contact-info">
-              <span>Call: +91 98765 43210</span>
+              <span>Call: +91 81014 02916</span>
               <span>Email: support@medixerp.com</span>
             </div>
           </div>
@@ -26,10 +26,10 @@ export const Footer: React.FC = () => {
           <div className="f-col">
             <h4 className="f-col-title">PRODUCT</h4>
             <ul className="f-links-list">
-              <li><a href="#solutions">Billing</a></li>
-              <li><a href="#solutions">Inventory</a></li>
-              <li><a href="#solutions">Purchasing</a></li>
-              <li><a href="#solutions">Expiry Management</a></li>
+              <li><a href="#features">Billing</a></li>
+              <li><a href="#modules">Inventory</a></li>
+              <li><a href="#modules">Purchasing</a></li>
+              <li><a href="#modules">Expiry Management</a></li>
             </ul>
           </div>
 
@@ -48,10 +48,10 @@ export const Footer: React.FC = () => {
           <div className="f-col">
             <h4 className="f-col-title">SUPPORT</h4>
             <ul className="f-links-list">
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">GST Compliance</a></li>
+              <li><a href="#specifications">Technical Specs</a></li>
+              <li><a href="#faq">Privacy Policy</a></li>
+              <li><a href="#faq">Terms of Service</a></li>
+              <li><a href="#faq">GST Compliance</a></li>
             </ul>
           </div>
 
@@ -59,8 +59,14 @@ export const Footer: React.FC = () => {
 
         {/* Footer Bottom Bar */}
         <div className="footer-copyright-bar">
-          <p>© 2026 Medix. All rights reserved.</p>
-          <p className="f-disclaimer">UDYAM Registered</p>
+          <p>© 2026 Medix. All rights reserved. | UDYAM Registered</p>
+          <div className="f-policy-links">
+            <a href="#">Privacy Policy</a>
+            <span className="f-policy-sep">|</span>
+            <a href="#">Terms</a>
+            <span className="f-policy-sep">|</span>
+            <a href="#faq">Contact</a>
+          </div>
         </div>
 
       </div>

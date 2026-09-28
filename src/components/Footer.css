@@ -1,96 +1,124 @@
+/* ============================================================
+   FOOTER — Simple Old-School Corporate Footer
+   ============================================================ */
+
 .corporate-footer {
   background-color: var(--bg-dark-green);
   color: var(--color-inverse-text);
-  padding: 4rem 0 2rem 0;
-  border-top: 1px solid var(--color-border-dark);
+  padding: 20px 0 0 0;
+  border-top: 2px solid var(--color-orange-primary);
 }
 
 .footer-columns-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3.5rem;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .f-logo-img {
-  height: 42px;
+  height: 28px;
   width: auto;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 6px;
 }
 
 .f-about-text {
-  font-size: 0.9rem;
+  font-size: 11px;
   color: var(--color-inverse-muted);
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.45;
+  margin-bottom: 8px;
 }
 
 .f-contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.85rem;
+  gap: 2px;
+  font-size: 11px;
   color: var(--bg-light-green);
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .f-col-title {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--color-inverse-text);
-  letter-spacing: 0.06em;
-  margin-bottom: 1.15rem;
+  font-size: 11px;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .f-links-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 4px;
 }
 
 .f-links-list a {
-  font-size: 0.9rem;
+  font-size: 11px;
   color: var(--color-inverse-muted);
-  text-decoration: none;
+  text-decoration: underline;
   transition: color var(--transition-fast);
 }
 
 .f-links-list a:hover {
-  color: var(--bg-light-green);
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .footer-copyright-bar {
-  border-top: 1px solid var(--color-border-dark);
-  padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 11px;
   color: var(--color-inverse-muted);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 6px 10px;
 }
 
-.f-disclaimer {
-  font-size: 0.78rem;
-  opacity: 0.8;
+.f-policy-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.f-policy-links a {
+  color: var(--color-inverse-muted);
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.f-policy-links a:hover {
+  color: #FFFFFF;
+}
+
+.f-policy-sep {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 4px;
 }
 
 @media (max-width: 900px) {
   .footer-columns-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 16px;
   }
 }
 
 @media (max-width: 540px) {
   .footer-columns-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
   .footer-copyright-bar {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 4px;
     text-align: center;
   }
 }

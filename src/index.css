@@ -1,57 +1,48 @@
 /* ==========================================================================
-   MEDIX PHARMACY ERP — Established B2B Software Vendor CSS
-   Visual Identity: Crisp, Dense, Functional Enterprise Software System
+   MEDIX PHARMACY ERP — Established B2B Enterprise Software CSS
+   Visual Identity: Rigid, Dense, Bevelled 2000s ERP System
+   Colors: Deep Green #1F3D2F, Muted Brass #8F5F1A, Neutral Grey #F2F3F1
+   Fonts: Verdana / Tahoma (12px, line-height 1.4)
    ========================================================================== */
 
 :root {
-  /* Rich Enterprise ERP Palette */
-  --bg-main: #F4F7F5;
+  /* Palette */
+  --bg-main: #F2F3F1;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #EBF3EF;
-  --bg-dark-green: #074730;
-  --bg-green-secondary: #059669;
-  --bg-light-green: #D1FAE5;
-  
-  /* Orange Accent System */
-  --color-orange-primary: #EA580C;
-  --color-orange-hover: #C2410C;
-  --color-orange-bg: #FFEDD5;
-  
-  --color-dark-text: #0F172A;
-  --color-gray-text: #334155;
-  --color-subtle-text: #64748B;
+  --bg-surface-alt: #E4EAE6;
+  --bg-dark-green: #1F3D2F;
+  --bg-dark-green-gradient: linear-gradient(to bottom, #294D3C 0%, #1F3D2F 100%);
+  --bg-green-secondary: #2B4F3E;
+  --bg-light-tint: #E4EAE6;
+
+  /* Muted Brass Accent System */
+  --color-orange-primary: #8F5F1A;
+  --color-orange-hover: #754C13;
+  --color-orange-bg: #F5ECD8;
+  --bg-brass-gradient: linear-gradient(to bottom, #A36F20 0%, #8F5F1A 100%);
+
+  --color-dark-text: #222222;
+  --color-gray-text: #555555;
+  --color-subtle-text: #777777;
   --color-inverse-text: #FFFFFF;
-  --color-inverse-muted: #A7F3D0;
-  
-  --color-border: #CBD5E1;
-  --color-border-dark: #047857;
+  --color-inverse-muted: #B8CCBF;
 
-  /* Status Colors */
-  --color-status-success: #059669;
-  --color-status-success-bg: #D1FAE5;
-  --color-status-warning: #D97706;
-  --color-status-warning-bg: #FEF3C7;
-  --color-status-danger: #DC2626;
-  --color-status-danger-bg: #FEE2E2;
+  --color-border: #C9CFCB;
+  --color-border-light: #E2E6E3;
+  --color-border-dark: #9EAF9F;
 
-  /* Traditional Corporate Typography Scale */
-  --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'IBM Plex Sans', monospace;
+  /* Fonts */
+  --font-heading: Verdana, Tahoma, Arial, sans-serif;
+  --font-body: Verdana, Tahoma, Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
 
-  /* Squared Functional 2px - 4px Border Radius */
-  --radius-sm: 2px;
-  --radius-md: 3px;
-  --radius-card: 4px;
-  --radius-lg: 4px;
+  /* Radius (Strict max 2px) */
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-card: 2px;
+  --radius-lg: 2px;
 
-  /* Crisp ERP Box Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 3px 8px rgba(7, 71, 48, 0.08);
-  --shadow-lg: 0 4px 14px rgba(7, 71, 48, 0.12);
-
-  --transition-fast: 100ms ease-in-out;
-  --transition-normal: 150ms ease-in-out;
+  --transition-fast: 50ms ease-in-out;
 }
 
 /* Reset & Base Setup */
@@ -63,16 +54,16 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 15px; /* Compact traditional base size */
-  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  -webkit-font-smoothing: auto;
 }
 
 body {
   background-color: var(--bg-main);
   color: var(--color-dark-text);
   font-family: var(--font-body);
-  font-size: 0.96rem; /* Crisp functional font size */
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.4;
   overflow-x: hidden;
 }
 
@@ -80,8 +71,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--bg-dark-green);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: bold;
+  line-height: 1.3;
 }
 
 .mono-text {
@@ -89,134 +80,141 @@ h1, h2, h3, h4, h5, h6 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Layout Containers */
+/* Fixed-Width Centered Container (~1040px) */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .container-narrow {
-  max-width: 920px;
+  max-width: 840px;
 }
 
+/* 8px Section Padding between sections */
 .section-padding {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
-/* Squared Rectangular Button System */
+/* Section Dotted / Double Dividers */
+.section-divider {
+  border: none;
+  border-top: 2px double #C9CFCB;
+  margin: 6px 0;
+}
+
+.section-divider-dotted {
+  border: none;
+  border-top: 1px dotted #9EAF9F;
+  margin: 6px 0;
+}
+
+/* Links */
+a {
+  color: var(--bg-dark-green);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #14291F;
+}
+
+a:hover {
+  color: var(--color-orange-primary);
+}
+
+/* Classic Bevelled Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 4px;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.92rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: var(--radius-md); /* 3px crisp squared border radius */
-  border: 1px solid transparent;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all var(--transition-fast);
   text-decoration: none;
   white-space: nowrap;
+  border-style: solid;
+  border-width: 1px;
 }
 
-.btn-primary {
-  background-color: var(--bg-dark-green);
-  color: var(--color-inverse-text);
-  border-color: var(--bg-dark-green);
-  box-shadow: var(--shadow-sm);
+/* Primary Button (Muted Brass #8F5F1A) */
+.btn-primary, .btn-orange {
+  background: var(--bg-brass-gradient);
+  color: #FFFFFF;
+  border-color: #B58235 #66430F #66430F #B58235;
 }
 
-.btn-primary:hover {
-  background-color: var(--bg-green-secondary);
-  border-color: var(--bg-green-secondary);
+.btn-primary:hover, .btn-orange:hover {
+  background: linear-gradient(to bottom, #8F5F1A 0%, #754C13 100%);
+  text-decoration: none;
 }
 
+.btn-primary:active, .btn-orange:active {
+  border-color: #66430F #B58235 #B58235 #66430F;
+  background: #754C13;
+}
+
+/* Secondary Button (Bevelled White) */
 .btn-secondary {
-  background-color: var(--bg-surface);
+  background: linear-gradient(to bottom, #FFFFFF 0%, #EBECE8 100%);
   color: var(--bg-dark-green);
-  border-color: var(--color-border);
+  border-color: #FFFFFF #A3AAA6 #A3AAA6 #FFFFFF;
+  box-shadow: 0 0 0 1px #C9CFCB;
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-surface-alt);
-  border-color: var(--bg-dark-green);
+  background: linear-gradient(to bottom, #EBECE8 0%, #DBDDD8 100%);
+  text-decoration: none;
 }
 
-.btn-light {
-  background-color: var(--bg-light-green);
-  color: var(--bg-dark-green);
-  border-color: rgba(7, 71, 48, 0.2);
-}
-
-.btn-light:hover {
-  background-color: #A7F3D0;
-}
-
-.btn-orange {
-  background-color: var(--color-orange-primary);
-  color: #FFFFFF;
-  border-color: var(--color-orange-primary);
-  box-shadow: 0 2px 4px rgba(234, 88, 12, 0.25);
-}
-
-.btn-orange:hover {
-  background-color: var(--color-orange-hover);
-  border-color: var(--color-orange-hover);
-}
-
-.badge-orange {
-  background-color: var(--color-orange-bg);
-  color: var(--color-orange-primary);
-  border: 1px solid rgba(234, 88, 12, 0.3);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.72rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  letter-spacing: 0.04em;
+.btn-secondary:active {
+  border-color: #A3AAA6 #FFFFFF #FFFFFF #A3AAA6;
 }
 
 .btn-lg {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.98rem;
+  padding: 5px 14px;
+  font-size: 12px;
 }
 
 .btn-sm {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.82rem;
+  padding: 2px 8px;
+  font-size: 11px;
 }
 
 /* Eyebrow Label */
 .eyebrow-label {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--bg-green-secondary);
-  margin-bottom: 0.4rem;
+  margin-bottom: 4px;
 }
 
-/* Crisp Squared ERP Box Card */
+/* Bevelled Panel Card Box */
 .medix-card {
   background-color: var(--bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card); /* 4px crisp squared radius */
-  padding: 1.25rem;
-  box-shadow: var(--shadow-sm);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E2E6E3 #A3AAA6 #A3AAA6 #E2E6E3;
+  outline: 1px solid #C9CFCB;
+  border-radius: 2px;
+  padding: 8px 10px;
 }
 
 /* Section Header Typography */
 .section-header {
-  margin-bottom: 1.75rem; /* Denser margin */
+  margin-bottom: 6px;
 }
 
 .section-header.center {
@@ -227,24 +225,100 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-header h2 {
-  font-size: 2.1rem; /* 33px section heading */
-  color: var(--bg-dark-green);
-  margin-bottom: 0.45rem;
-  letter-spacing: -0.02em;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  background: var(--bg-dark-green-gradient);
+  padding: 5px 10px;
+  border-bottom: 2px solid var(--color-orange-primary);
+  border-radius: 2px 2px 0 0;
+  display: block;
+}
+
+.section-header h2::before {
+  content: '▪ ';
+  color: var(--color-orange-primary);
+  font-size: 14px;
 }
 
 .section-header p {
-  font-size: 1rem;
+  font-size: 11px;
   color: var(--color-gray-text);
-  line-height: 1.5;
+  line-height: 1.4;
+  padding: 4px 8px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid #C9CFCB;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+/* Breadcrumb Line */
+.breadcrumb-bar {
+  background-color: #E2E6E3;
+  border-bottom: 1px solid #C9CFCB;
+  padding: 3px 0;
+  font-size: 10px;
+  color: var(--color-subtle-text);
+}
+
+.breadcrumb-bar a {
+  color: var(--bg-dark-green);
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+.breadcrumb-sep {
+  margin: 0 4px;
+  color: #888;
+}
+
+/* Enterprise Data Tables */
+.erp-table-wrap {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.erp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+/* Table Column Headers */
+.erp-table th {
+  background: linear-gradient(to bottom, #EEF2EF 0%, #E4EAE6 100%);
+  color: var(--bg-dark-green);
+  padding: 5px 8px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 11px;
+  border: 1px solid #C9CFCB;
+}
+
+.erp-table td {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #C9CFCB;
+  color: var(--color-dark-text);
+}
+
+.erp-table tr:nth-child(even) td {
+  background-color: #F7F8F7;
+}
+
+.erp-table tr:hover td {
+  background-color: #E6ECE8;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
   .section-header h2 {
-    font-size: 1.7rem;
+    font-size: 16px;
   }
 }
