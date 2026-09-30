@@ -136,16 +136,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </>
               )}
             </>
-          ) : (
-<<<<<<< HEAD
-            <>
+          ) :
               <Link to="/">Home</Link>
               <span className="breadcrumb-sep">&gt;</span>
               <Link to="/dealers">Dealers &amp; Partners</Link>
-            </>
-=======
+
             <Link to="/internnships">Careers &amp; Internships</Link>
->>>>>>> 5252c64
+
           )}
         </div>
       </div>
