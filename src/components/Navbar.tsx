@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
                 <Link to="/#pricing" className="nav-link">Pricing</Link>
               </>
             )}
-            <Link to="/dealers" className={`nav-link${location.pathname === '/dealers' ? ' active' : ''}`}>Dealers</Link>
+            <Link to="/dealers" className={`nav-link${location.pathname === '/dealers' ? ' active' : ''}`}>Careers</Link>
           </nav>
 
           {/* Right Action Button */}
@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
           {isHome ? (
             <span>Pharmacy Management Software</span>
           ) : (
-            <Link to="/dealers">Dealers &amp; Partners</Link>
+            <Link to="/internnships">Careers &amp; Internships</Link>
           )}
         </div>
       </div>
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
           ) : (
             <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           )}
-          <Link to="/dealers" onClick={() => setMobileMenuOpen(false)}>Dealers</Link>
+          <Link to="/internships" onClick={() => setMobileMenuOpen(false)}>Careers &amp; Internships</Link>
           <button
             onClick={() => { setMobileMenuOpen(false); onOpenDemo(); }}
             className="btn-corporate-demo mobile-demo-btn"
