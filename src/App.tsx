@@ -6,7 +6,7 @@ export function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/dealers" element={<DealersPage />} />
+      <Route path="/internships" element={<DealersPage />} />
     </Routes>
   );
 }
