@@ -133,10 +133,7 @@ export function HomePage() {
           <FeatureTable />
         </div>
 
-        {/* PRICING tab */}
-        <div className="tab-section" data-tabs="pricing">
-          <PricingSection onOpenDemo={handleOpenDemo} />
-        </div>
+
 
         {/* SPECS tab */}
         <div className="tab-section" data-tabs="specs">
